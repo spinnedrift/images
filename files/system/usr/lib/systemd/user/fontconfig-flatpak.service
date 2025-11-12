@@ -1,0 +1,11 @@
+[Unit]
+Description=ShapeOS Font Configuration Service for Flatpaks
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+ExecStart=/usr/libexec/fc-flatpak-helper
+
+[Install]
+WantedBy=xdg-desktop-autostart.target
+

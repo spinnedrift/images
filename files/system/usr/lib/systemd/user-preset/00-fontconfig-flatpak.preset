@@ -1,0 +1,2 @@
+# Enable ShapeOS fontconfig service
+enable fontconfig-flatpak.service

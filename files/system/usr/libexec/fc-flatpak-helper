@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ ! -f $HOME/.config/fontconfig/.shape-initialized ]; then
+    /usr/bin/mkdir -p $HOME/.config/fontconfig
+    /usr/bin/flatpak override --user --filesystem=xdg-config/fontconfig
+    /usr/bin/touch $HOME/.config/fontconfig/.shape-initialized
+fi
+
+# copies system fontconfig to user config dir
+/usr/bin/cp -fv /usr/share/fontconfig/conf.avail/zz1-system-font-stack.conf 
